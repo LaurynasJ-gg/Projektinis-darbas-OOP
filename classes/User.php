@@ -68,4 +68,16 @@ class User
 
         return true;
     }
+
+    private function userExists(string $vardas): bool
+    {
+        $sql = "SELECT id FROM vartotojai WHERE vardas = :vardas";
+
+        $stmt = $this->Database->prepare($sql);
+        $stmt->execute([
+            ':vardas' => $vardas
+        ]);
+
+        return $stmt->fetch() !== false;
+    }
 }
