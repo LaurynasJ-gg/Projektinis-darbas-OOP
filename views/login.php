@@ -1,3 +1,29 @@
+<?php
+
+require_once __DIR__ . '/../classes/Database.php';
+require_once __DIR__ . '/../classes/User.php';
+
+$message = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $database = new Database();
+    $conndb = $database->connect();
+
+    $user = new User($conndb);
+
+    $vardas = $_POST['vardas'] ?? '';
+    $slaptazodis = $_POST['slaptazodis'] ?? '';
+
+    if ($user->login($vardas, $slaptazodis)) {
+        header('Location: index.php?page=dashboard');
+        exit;
+    } else {
+        $message = 'Neteisingas vartotojo vardas arba slaptažodis.';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
