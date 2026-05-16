@@ -1,3 +1,28 @@
+<?php
+
+require_once __DIR__ . '/../classes/Database.php';
+require_once __DIR__ . '/../classes/User.php';
+
+$message = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $database = new Database();	
+    $conn = $database->connect();
+
+    $user = new User($conn);
+
+    $vardas = $_POST['vardas'] ?? '';
+    $slaptazodis = $_POST['slaptazodis'] ?? '';
+
+    if ($user->register($vardas, $slaptazodis)) {
+        $message = 'Registracija pavyko. Dabar galite prisijungti.';
+    } else {
+        $message = 'Registracija nepavyko. Gal toks vartotojas jau yra.';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="lt">
 <head>
