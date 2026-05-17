@@ -73,11 +73,11 @@ class User
     {
         $sql = "SELECT id FROM vartotojai WHERE vardas = :vardas";
 
-        $stmt = $this->Database->prepare($sql);
-        $stmt->execute([
+        $uklausa = $this->Database->prepare($sql);
+        $uklausa->execute([
             ':vardas' => $vardas
         ]);
 
-        return $stmt->fetch() !== false;
+        return $uklausa->fetch() !== false;
     }
 }
