@@ -34,6 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <h1>Prisijungimas</h1>
 
+<?php if ($message != ''): ?>
+    <p><?= $message ?></p>
+<?php endif; ?>
+
 <form method="POST">
     <label>Prisijungimo vardas:</label><br>
     <input type="text" name="vardas" required><br><br>
