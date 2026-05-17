@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../classes/Database.php';
-require_once __DIR__ . '/../classes/Encryptor.php';
+require_once 'classes/Database.php';
+require_once 'classes/Encryptor.php';
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: index.php?page=login');

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/Encryptor.php';
+require_once 'Encryptor.php';
 
 class User
 {
@@ -73,11 +73,11 @@ class User
     {
         $sql = "SELECT id FROM vartotojai WHERE vardas = :vardas";
 
-        $uklausa = $this->Database->prepare($sql);
-        $uklausa->execute([
+        $uzklausa = $this->Database->prepare($sql);
+        $uzklausa->execute([
             ':vardas' => $vardas
         ]);
 
-        return $uklausa->fetch() !== false;
+        return $uzklausa->fetch() !== false;
     }
 }

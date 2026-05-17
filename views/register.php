@@ -1,15 +1,15 @@
 <?php
 
-require_once __DIR__ . '/../classes/Database.php';
-require_once __DIR__ . '/../classes/User.php';
+require_once 'classes/Database.php';
+require_once 'classes/User.php';
 
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $database = new Database();	
-    $conn = $database->connect();
+    $conndb = $database->connect();
 
-    $user = new User($conn);
+    $user = new User($conndb);
 
     $vardas = $_POST['vardas'] ?? '';
     $slaptazodis = $_POST['slaptazodis'] ?? '';

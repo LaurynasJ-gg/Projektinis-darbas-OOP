@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once __DIR__ . '/classes/Routes.php';
+require_once 'classes/Routes.php';
 
 $page = $_GET['page'] ?? 'login';
 

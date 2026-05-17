@@ -6,7 +6,7 @@ class Database
 
     private function getEnvValue(string $key): string
     {
-        $envPath = __DIR__ . '/../.env'; 
+        $envPath = '.env'; 
 
         if (!file_exists($envPath)) {
             die('.env failas nerastas.');

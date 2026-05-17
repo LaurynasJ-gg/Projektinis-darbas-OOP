@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../classes/Database.php';
-require_once __DIR__ . '/../classes/User.php';
+require_once 'classes/Database.php';
+require_once 'classes/User.php';
 
 $message = '';
 
