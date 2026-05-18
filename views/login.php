@@ -31,12 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Prisijungimas</title>
 </head>
 <body>
-
+<Div style="width: 700px; margin: 40px auto; text-align: center;">
 <h1>Prisijungimas</h1>
 
-<?php if ($message != ''): ?>
-    <p><?= $message ?></p>
-<?php endif; ?>
+
+<p><?= $message ?></p>
+
 
 <form method="POST">
     <label>Prisijungimo vardas:</label><br>
@@ -49,6 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <p> Neturi susikūręs paskyros?<a href="index.php?page=register"> Registruotis čia</a> </p>
-
+</div>
 </body>
 </html>

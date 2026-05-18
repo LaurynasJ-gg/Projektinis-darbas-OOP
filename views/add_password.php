@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Slaptažodžių generavimas</title>
 </head>
 <body>
-
+<Div style="width: 700px; margin: 40px auto; text-align: center;">
 <h1>Susikurkite savo slaptažodį</h1>
 
 <p><?= $message ?></p>
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <label>Specialių simbolių skaičius - </label><br>
     <input type="number" name="specials" value="2" required><br><br>
 
-    <button type="submit" name="generate">Generuoti</button>
+    <button type="submit" name="generate">Generuoti slaptažodį</button>
 </form>
 
 <hr>
@@ -106,6 +106,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <p>
     <a href="index.php?page=dashboard">Grįžti atgal į valdymo puslapį</a>
 </p>
-
+</div>
 </body>
 </html>

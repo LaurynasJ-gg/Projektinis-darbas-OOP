@@ -30,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Registracija</title>
 </head>
 <body>
-
+<div style="width: 700px; margin: 40px auto; text-align: center;">
 <h1>Registracija</h1>
 
-<?php if ($message != ''): ?>
-    <p><?= $message ?></p>
-<?php endif; ?>
+
+<p><?= $message ?></p>
+
 
 <form method="POST">
     <label>Vartotojo vardas:</label><br>
@@ -48,6 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <p> Turi paskyrą? <a href="index.php?page=login"> Prisijungti čia </a> </p>
-
+</div>
 </body>
 </html>
